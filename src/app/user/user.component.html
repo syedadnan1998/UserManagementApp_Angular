@@ -1,0 +1,36 @@
+<div class="card bg-light">
+  <div class="card-body">
+    <table class="table table-bordered">
+      <tr>
+        <th>Username</th>
+        <td>{{ user.name }}</td>
+      </tr>
+      <tr>
+        <th>Email</th>
+        <td>{{ user.email }}</td>
+      </tr>
+      <tr>
+        <th>Comapny</th>
+        <td>{{ user.company.name }}</td>
+      </tr>
+      <tr>
+        <th>Address</th>
+        <td>{{ user.address | address }}</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<hr />
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link" routerLink="address">Address</a>
+  </li>
+  <li class="nav-item active">
+    <a class="nav-link" routerLink="company"
+      >Company <span class="sr-only"></span
+    ></a>
+  </li>
+</ul>
+
+<router-outlet></router-outlet>
